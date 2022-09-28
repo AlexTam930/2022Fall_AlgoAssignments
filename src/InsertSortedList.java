@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class InsertSortedList {
 
     public static void main(String[] args) {
@@ -12,6 +14,8 @@ public class InsertSortedList {
         node3.next = node4;
 
         insert(node1, 2);
+
+        ArrayList<Integer> vals = new ArrayList<Integer>();
     }
 
 
@@ -45,5 +49,6 @@ public class InsertSortedList {
 
         }
     }
+
 
 }
