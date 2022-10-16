@@ -8,12 +8,23 @@ public class quiz1 {
 
 
     public static void main(String[] args) {
+        int[] test = {-1,-100,3,99};
+        int [] result = rotateArray(test, 2);
+        printArrar(result);
 
+    }
+
+    private static void printArrar(int[] array) {
+        System.out.print("[");
+        for (int i : array) {
+            System.out.print(i + ",");
+        }
+        System.out.print("]");
 
     }
 
     // Given an array, rotate the array to the right by k steps, where k is non-negative.
-    public static void rotateArray(int[] array, int k) {
+    public static int[] rotateArray(int[] array, int k) {
         int k1 = k % array.length;
 
         int[] result = new int[array.length];
@@ -28,6 +39,8 @@ public class quiz1 {
         for (int j = 0; j < list.size(); j++) {
             result[j] = list.get(j);
         }
+
+        return result;
     }
 
     // Given the roots of two binary trees p and q, write a function to check if they are the same or not.
