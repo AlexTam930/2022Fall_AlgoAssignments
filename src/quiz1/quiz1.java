@@ -6,12 +6,13 @@ import java.util.*;
 
 public class quiz1 {
 
-    // Given an array, rotate the array to the right by k steps, where k is non-negative.
+
     public static void main(String[] args) {
 
 
     }
 
+    // Given an array, rotate the array to the right by k steps, where k is non-negative.
     public static void rotateArray(int[] array, int k) {
         int k1 = k % array.length;
 
