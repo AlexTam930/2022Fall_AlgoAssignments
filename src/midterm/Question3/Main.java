@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         List<Integer> result = new ArrayList<>();
 
-        traverse(getBST(), result);
+        traverse(getBST(), result, 5, 8);
 
         printList(result);
     }
@@ -29,18 +29,18 @@ public class Main {
         }
     }
 
-    private static void traverse(Node node, List<Integer> list) {
+    private static void traverse(Node node, List<Integer> list, int small, int great) {
         if (node == null) {
             return;
         }
 
-        traverse(node.left, list);
+        traverse(node.left, list, small, great);
 
-        if ((int) node.data <= 8 && (int) node.data >= 5) {
+        if ((int) node.data <= great && (int) node.data >= small) {
             list.add((int) node.data);
         }
 
-        traverse(node.right, list);
+        traverse(node.right, list, small, great);
     }
 
     // Given range between 5 and 8 it will print 6, 7, 8
