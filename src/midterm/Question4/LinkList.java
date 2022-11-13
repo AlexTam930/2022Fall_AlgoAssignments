@@ -27,11 +27,13 @@ public class LinkList  {
         while (stem != null) {
             if (stem.next != null) {
                 if (node.data >= stem.data && node.data <= stem.next.data) {
+                    Node next = stem.next;
                     stem.next = node;
-                    node.next = stem.next;
-                } else if (stem.next == null && node.data >= stem.data) {
-                    stem.next = node;
+                    node.next = next;
+                    break;
                 }
+            } else if (stem.next == null && node.data >= stem.data) {
+                stem.next = node;
             }
 
             stem = stem.next;
